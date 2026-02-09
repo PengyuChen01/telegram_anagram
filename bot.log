@@ -1,0 +1,499 @@
+2026-02-09 11:46:00,767 - __main__ - INFO - Bot starting...
+2026-02-09 11:46:01,323 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getMe "HTTP/1.1 200 OK"
+2026-02-09 11:46:01,447 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-09 11:46:01,449 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 11:46:01,449 - telegram.ext.Application - INFO - Application started
+2026-02-09 11:46:05,912 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:05,914 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:05,915 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:11,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:11,668 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:11,669 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:17,122 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:17,124 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:17,124 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:23,042 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:23,044 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:23,045 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:31,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:31,986 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:31,987 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:37,714 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 200 OK"
+2026-02-09 11:46:38,198 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/sendMessage "HTTP/1.1 200 OK"
+2026-02-09 11:46:38,253 - __main__ - INFO - Game started in chat 6130919642: letters=['U', 'I', 'G', 'N', 'H', 'A'], possible=105
+2026-02-09 11:46:38,530 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/sendMessage "HTTP/1.1 200 OK"
+2026-02-09 11:46:38,534 - apscheduler.scheduler - INFO - Added job "game_tick_6130919642" to job store "default"
+2026-02-09 11:46:39,540 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:40 UTC)" (scheduled at 2026-02-09 16:46:39.532087+00:00)
+2026-02-09 11:46:39,813 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:39,816 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:40 UTC)" executed successfully
+2026-02-09 11:46:40,550 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:41 UTC)" (scheduled at 2026-02-09 16:46:40.532087+00:00)
+2026-02-09 11:46:40,799 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:40,802 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:41 UTC)" executed successfully
+2026-02-09 11:46:41,536 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:42 UTC)" (scheduled at 2026-02-09 16:46:41.532087+00:00)
+2026-02-09 11:46:41,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:41,786 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:42 UTC)" executed successfully
+2026-02-09 11:46:42,541 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:43 UTC)" (scheduled at 2026-02-09 16:46:42.532087+00:00)
+2026-02-09 11:46:42,795 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:42,797 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:43 UTC)" executed successfully
+2026-02-09 11:46:43,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 200 OK"
+2026-02-09 11:46:43,302 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-09 11:46:43,546 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:44 UTC)" (scheduled at 2026-02-09 16:46:43.532087+00:00)
+2026-02-09 11:46:43,618 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:44,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 400 Bad Request"
+2026-02-09 11:46:44,043 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:44 UTC)" executed successfully
+2026-02-09 11:46:44,335 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 200 OK"
+2026-02-09 11:46:44,536 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:45 UTC)" (scheduled at 2026-02-09 16:46:44.532087+00:00)
+2026-02-09 11:46:44,576 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-09 11:46:44,825 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:44,827 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:45 UTC)" executed successfully
+2026-02-09 11:46:44,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 400 Bad Request"
+2026-02-09 11:46:45,220 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 200 OK"
+2026-02-09 11:46:45,466 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:45,467 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:45,468 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:45,470 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-09 11:46:45,556 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:46 UTC)" (scheduled at 2026-02-09 16:46:45.532087+00:00)
+2026-02-09 11:46:45,756 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:45,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 400 Bad Request"
+2026-02-09 11:46:45,867 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:46 UTC)" executed successfully
+2026-02-09 11:46:46,544 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:47 UTC)" (scheduled at 2026-02-09 16:46:46.532087+00:00)
+2026-02-09 11:46:46,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:46,799 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:47 UTC)" executed successfully
+2026-02-09 11:46:47,548 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:48 UTC)" (scheduled at 2026-02-09 16:46:47.532087+00:00)
+2026-02-09 11:46:47,801 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:47,804 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:48 UTC)" executed successfully
+2026-02-09 11:46:48,541 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:49 UTC)" (scheduled at 2026-02-09 16:46:48.532087+00:00)
+2026-02-09 11:46:48,788 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:48,791 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:49 UTC)" executed successfully
+2026-02-09 11:46:49,053 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:49,054 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:49,056 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:49,545 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:50 UTC)" (scheduled at 2026-02-09 16:46:49.532087+00:00)
+2026-02-09 11:46:50,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:50,463 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:50 UTC)" executed successfully
+2026-02-09 11:46:50,539 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:51 UTC)" (scheduled at 2026-02-09 16:46:50.532087+00:00)
+2026-02-09 11:46:51,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:51,182 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:51 UTC)" executed successfully
+2026-02-09 11:46:51,543 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:52 UTC)" (scheduled at 2026-02-09 16:46:51.532087+00:00)
+2026-02-09 11:46:51,795 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:51,797 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:52 UTC)" executed successfully
+2026-02-09 11:46:52,541 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:53 UTC)" (scheduled at 2026-02-09 16:46:52.532087+00:00)
+2026-02-09 11:46:52,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:52,796 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:53 UTC)" executed successfully
+2026-02-09 11:46:53,544 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:54 UTC)" (scheduled at 2026-02-09 16:46:53.532087+00:00)
+2026-02-09 11:46:53,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:46:53,703 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:53,704 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:46:53,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:53,799 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:54 UTC)" executed successfully
+2026-02-09 11:46:54,538 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:55 UTC)" (scheduled at 2026-02-09 16:46:54.532087+00:00)
+2026-02-09 11:46:54,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:54,792 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:55 UTC)" executed successfully
+2026-02-09 11:46:55,545 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:56 UTC)" (scheduled at 2026-02-09 16:46:55.532087+00:00)
+2026-02-09 11:46:55,803 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:55,805 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:56 UTC)" executed successfully
+2026-02-09 11:46:56,536 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:57 UTC)" (scheduled at 2026-02-09 16:46:56.532087+00:00)
+2026-02-09 11:46:56,798 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:56,800 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:57 UTC)" executed successfully
+2026-02-09 11:46:57,548 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:58 UTC)" (scheduled at 2026-02-09 16:46:57.532087+00:00)
+2026-02-09 11:46:57,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:57,800 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:58 UTC)" executed successfully
+2026-02-09 11:46:58,542 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:59 UTC)" (scheduled at 2026-02-09 16:46:58.532087+00:00)
+2026-02-09 11:46:58,792 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:58,794 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:46:59 UTC)" executed successfully
+2026-02-09 11:46:59,550 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:00 UTC)" (scheduled at 2026-02-09 16:46:59.532087+00:00)
+2026-02-09 11:46:59,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:46:59,796 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:00 UTC)" executed successfully
+2026-02-09 11:47:00,512 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:47:00,514 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:00,514 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:00,542 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:01 UTC)" (scheduled at 2026-02-09 16:47:00.532087+00:00)
+2026-02-09 11:47:00,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:00,797 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:01 UTC)" executed successfully
+2026-02-09 11:47:01,550 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:02 UTC)" (scheduled at 2026-02-09 16:47:01.532087+00:00)
+2026-02-09 11:47:01,807 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:01,810 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:02 UTC)" executed successfully
+2026-02-09 11:47:02,543 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:03 UTC)" (scheduled at 2026-02-09 16:47:02.532087+00:00)
+2026-02-09 11:47:02,793 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:02,795 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:03 UTC)" executed successfully
+2026-02-09 11:47:03,543 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:04 UTC)" (scheduled at 2026-02-09 16:47:03.532087+00:00)
+2026-02-09 11:47:03,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:03,792 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:04 UTC)" executed successfully
+2026-02-09 11:47:04,545 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:05 UTC)" (scheduled at 2026-02-09 16:47:04.532087+00:00)
+2026-02-09 11:47:04,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:04,793 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:05 UTC)" executed successfully
+2026-02-09 11:47:05,534 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:06 UTC)" (scheduled at 2026-02-09 16:47:05.532087+00:00)
+2026-02-09 11:47:05,781 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:05,783 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:06 UTC)" executed successfully
+2026-02-09 11:47:06,545 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:07 UTC)" (scheduled at 2026-02-09 16:47:06.532087+00:00)
+2026-02-09 11:47:06,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:06,793 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:07 UTC)" executed successfully
+2026-02-09 11:47:07,534 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:08 UTC)" (scheduled at 2026-02-09 16:47:07.532087+00:00)
+2026-02-09 11:47:07,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:07,787 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:08 UTC)" executed successfully
+2026-02-09 11:47:08,540 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:09 UTC)" (scheduled at 2026-02-09 16:47:08.532087+00:00)
+2026-02-09 11:47:08,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:08,793 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:09 UTC)" executed successfully
+2026-02-09 11:47:09,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:47:09,053 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:09,054 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:09,546 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:10 UTC)" (scheduled at 2026-02-09 16:47:09.532087+00:00)
+2026-02-09 11:47:09,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:09,793 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:10 UTC)" executed successfully
+2026-02-09 11:47:10,539 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:11 UTC)" (scheduled at 2026-02-09 16:47:10.532087+00:00)
+2026-02-09 11:47:10,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:10,793 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:11 UTC)" executed successfully
+2026-02-09 11:47:11,550 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:12 UTC)" (scheduled at 2026-02-09 16:47:11.532087+00:00)
+2026-02-09 11:47:11,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:11,804 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:12 UTC)" executed successfully
+2026-02-09 11:47:12,541 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:13 UTC)" (scheduled at 2026-02-09 16:47:12.532087+00:00)
+2026-02-09 11:47:12,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:12,792 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:13 UTC)" executed successfully
+2026-02-09 11:47:13,544 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:14 UTC)" (scheduled at 2026-02-09 16:47:13.532087+00:00)
+2026-02-09 11:47:13,805 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:13,807 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:14 UTC)" executed successfully
+2026-02-09 11:47:14,553 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:15 UTC)" (scheduled at 2026-02-09 16:47:14.532087+00:00)
+2026-02-09 11:47:14,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:14,804 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:15 UTC)" executed successfully
+2026-02-09 11:47:15,546 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:16 UTC)" (scheduled at 2026-02-09 16:47:15.532087+00:00)
+2026-02-09 11:47:15,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:15,796 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:16 UTC)" executed successfully
+2026-02-09 11:47:16,538 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:17 UTC)" (scheduled at 2026-02-09 16:47:16.532087+00:00)
+2026-02-09 11:47:16,788 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:16,790 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:17 UTC)" executed successfully
+2026-02-09 11:47:17,547 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:18 UTC)" (scheduled at 2026-02-09 16:47:17.532087+00:00)
+2026-02-09 11:47:17,798 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:17,800 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:18 UTC)" executed successfully
+2026-02-09 11:47:18,064 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:47:18,066 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:18,067 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:18,540 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:19 UTC)" (scheduled at 2026-02-09 16:47:18.532087+00:00)
+2026-02-09 11:47:18,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:18,788 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:19 UTC)" executed successfully
+2026-02-09 11:47:19,546 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:20 UTC)" (scheduled at 2026-02-09 16:47:19.532087+00:00)
+2026-02-09 11:47:19,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:19,796 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:20 UTC)" executed successfully
+2026-02-09 11:47:20,543 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:21 UTC)" (scheduled at 2026-02-09 16:47:20.532087+00:00)
+2026-02-09 11:47:20,793 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:20,795 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:21 UTC)" executed successfully
+2026-02-09 11:47:21,539 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:22 UTC)" (scheduled at 2026-02-09 16:47:21.532087+00:00)
+2026-02-09 11:47:21,779 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:21,779 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:22 UTC)" executed successfully
+2026-02-09 11:47:22,553 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:23 UTC)" (scheduled at 2026-02-09 16:47:22.532087+00:00)
+2026-02-09 11:47:22,799 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:22,801 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:23 UTC)" executed successfully
+2026-02-09 11:47:23,541 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:24 UTC)" (scheduled at 2026-02-09 16:47:23.532087+00:00)
+2026-02-09 11:47:23,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:23,791 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:24 UTC)" executed successfully
+2026-02-09 11:47:24,547 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:25 UTC)" (scheduled at 2026-02-09 16:47:24.532087+00:00)
+2026-02-09 11:47:24,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:24,797 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:25 UTC)" executed successfully
+2026-02-09 11:47:25,538 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:26 UTC)" (scheduled at 2026-02-09 16:47:25.532087+00:00)
+2026-02-09 11:47:25,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:25,791 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:26 UTC)" executed successfully
+2026-02-09 11:47:26,546 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:27 UTC)" (scheduled at 2026-02-09 16:47:26.532087+00:00)
+2026-02-09 11:47:26,793 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:26,794 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:27 UTC)" executed successfully
+2026-02-09 11:47:27,544 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:28 UTC)" (scheduled at 2026-02-09 16:47:27.532087+00:00)
+2026-02-09 11:47:27,787 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:27,789 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:28 UTC)" executed successfully
+2026-02-09 11:47:28,540 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:29 UTC)" (scheduled at 2026-02-09 16:47:28.532087+00:00)
+2026-02-09 11:47:28,857 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:28,858 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:29 UTC)" executed successfully
+2026-02-09 11:47:29,086 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-09 11:47:29,086 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:29,086 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-09 11:47:29,544 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:30 UTC)" (scheduled at 2026-02-09 16:47:29.532087+00:00)
+2026-02-09 11:47:29,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:29,796 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:30 UTC)" executed successfully
+2026-02-09 11:47:30,535 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:31 UTC)" (scheduled at 2026-02-09 16:47:30.532087+00:00)
+2026-02-09 11:47:30,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8519921157:AAFY5Xt5RKlSkA8C-pkqLMCAcQnRSDMbHm4/editMessageText "HTTP/1.1 200 OK"
+2026-02-09 11:47:30,786 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 16:47:31 UTC)" executed successfully

@@ -76,6 +76,10 @@ async def end_game(context, chat_id):
     if not session:
         return
     session.finish()
+    # Stop the tick job
+    jobs = context.job_queue.get_jobs_by_name("game_tick_%d" % chat_id)
+    for job in jobs:
+        job.schedule_removal()
     for player in session.players.values():
         if player.message_id:
             try:
@@ -92,9 +96,28 @@ async def end_game(context, chat_id):
     del active_games[chat_id]
 
 
-async def timer_callback(context):
+async def tick_callback(context):
+    """Called every second to refresh the timer display for all players."""
     chat_id = context.job.data
-    await end_game(context, chat_id)
+    session = active_games.get(chat_id)
+    if not session or not session.is_playing:
+        return
+    if session.time_remaining <= 0:
+        await end_game(context, chat_id)
+        return
+    # Update every player's message to show the new time
+    for user_id, player in session.players.items():
+        if player.message_id:
+            text = format_game_message(session, player)
+            keyboard = build_game_keyboard(session.letters)
+            try:
+                await context.bot.edit_message_text(
+                    chat_id=chat_id, message_id=player.message_id,
+                    text=text, reply_markup=keyboard,
+                )
+            except Exception as e:
+                if "Message is not modified" not in str(e):
+                    logger.warning("Tick update failed: %s", e)
 
 
 async def start_game_session(context, session):
@@ -105,9 +128,10 @@ async def start_game_session(context, session):
                 session.chat_id, session.letters, len(session.possible_words))
     for user_id in session.players:
         await send_game_keyboard(context, session.chat_id, session, user_id)
-    context.job_queue.run_once(
-        timer_callback, when=GAME_DURATION,
-        data=session.chat_id, name="game_timer_%d" % session.chat_id,
+    # Start a repeating job that ticks every 1 second
+    context.job_queue.run_repeating(
+        tick_callback, interval=1, first=1,
+        data=session.chat_id, name="game_tick_%d" % session.chat_id,
     )
 
 

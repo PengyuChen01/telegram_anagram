@@ -1,9 +1,7 @@
 """Inline Keyboard generation for the Anagram game.
 
-Layout: only the game letters + backspace + submit
-Row 1: [letter1] [letter2] [letter3]
-Row 2: [letter4] [letter5] [letter6]
-Row 3: [backspace] [submit]
+Layout: all buttons in a single row
+[letter1] [letter2] [letter3] [letter4] [letter5] [letter6] [backspace] [submit]
 """
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
@@ -15,32 +13,22 @@ CB_SUBMIT = "action:submit"
 
 
 def build_game_keyboard(available_letters=None):
-    """Build keyboard with only the game letters + backspace + submit."""
+    """Build keyboard with all buttons in a single row."""
     if not available_letters:
         return InlineKeyboardMarkup([])
 
     letters = [l.upper() for l in available_letters]
 
-    # Split letters into rows of 3
-    keyboard = []
+    # All buttons in one row: 6 letters + backspace + submit
     row = []
     for letter in letters:
         row.append(
             InlineKeyboardButton(letter, callback_data="%s%s" % (CB_LETTER, letter))
         )
-        if len(row) == 3:
-            keyboard.append(row)
-            row = []
-    if row:
-        keyboard.append(row)
+    row.append(InlineKeyboardButton("\u232b", callback_data=CB_BACKSPACE))
+    row.append(InlineKeyboardButton("\u2713", callback_data=CB_SUBMIT))
 
-    # Add backspace and submit row
-    keyboard.append([
-        InlineKeyboardButton("\u232b", callback_data=CB_BACKSPACE),
-        InlineKeyboardButton("\u2713", callback_data=CB_SUBMIT),
-    ])
-
-    return InlineKeyboardMarkup(keyboard)
+    return InlineKeyboardMarkup([row])
 
 
 def build_join_keyboard():
