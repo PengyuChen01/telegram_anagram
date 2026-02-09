@@ -24,6 +24,7 @@ from keyboard import (
     build_game_keyboard,
     build_join_keyboard,
     CB_LETTER,
+    CB_RESTORE,
     CB_BACKSPACE,
     CB_SUBMIT,
 )
@@ -49,7 +50,7 @@ async def send_game_keyboard(context, chat_id, session, user_id):
     if not player:
         return 0
     text = format_game_message(session, player)
-    keyboard = build_game_keyboard(session.letters)
+    keyboard = build_game_keyboard(session.letters, player.used_positions)
     msg = await context.bot.send_message(chat_id=chat_id, text=text, reply_markup=keyboard)
     player.message_id = msg.message_id
     return msg.message_id
@@ -60,7 +61,7 @@ async def update_player_message(context, chat_id, session, user_id):
     if not player or not player.message_id:
         return
     text = format_game_message(session, player)
-    keyboard = build_game_keyboard(session.letters)
+    keyboard = build_game_keyboard(session.letters, player.used_positions)
     try:
         await context.bot.edit_message_text(
             chat_id=chat_id, message_id=player.message_id,
@@ -109,7 +110,7 @@ async def tick_callback(context):
     for user_id, player in session.players.items():
         if player.message_id:
             text = format_game_message(session, player)
-            keyboard = build_game_keyboard(session.letters)
+            keyboard = build_game_keyboard(session.letters, player.used_positions)
             try:
                 await context.bot.edit_message_text(
                     chat_id=chat_id, message_id=player.message_id,
@@ -202,8 +203,16 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.answer("You are not in this game!")
         return
     if data.startswith(CB_LETTER):
-        letter = data[len(CB_LETTER):]
-        await handle_letter_press(query, context, chat_id, session, player, letter)
+        # format: letter:<position>:<letter>
+        parts = data[len(CB_LETTER):].split(":")
+        position = int(parts[0])
+        letter = parts[1]
+        await handle_letter_press(query, context, chat_id, session, player, letter, position)
+    elif data.startswith(CB_RESTORE):
+        # format: restore:<position>:<letter>
+        parts = data[len(CB_RESTORE):].split(":")
+        position = int(parts[0])
+        await handle_restore(query, context, chat_id, session, player, position)
     elif data == CB_BACKSPACE:
         await handle_backspace(query, context, chat_id, session, player)
     elif data == CB_SUBMIT:
@@ -249,11 +258,24 @@ async def handle_begin(query, context, chat_id, user):
     await start_game_session(context, session)
 
 
-async def handle_letter_press(query, context, chat_id, session, player, letter):
+async def handle_letter_press(query, context, chat_id, session, player, letter, position):
     if session.time_remaining <= 0:
         await query.answer("Time is up!")
         return
-    player.add_letter(letter)
+    if position in player.used_positions:
+        await query.answer("Already used!")
+        return
+    player.add_letter(letter, position)
+    player.last_action = ""
+    await query.answer()
+    await update_player_message(context, chat_id, session, player.user_id)
+
+
+async def handle_restore(query, context, chat_id, session, player, position):
+    if session.time_remaining <= 0:
+        await query.answer("Time is up!")
+        return
+    player.restore_position(position)
     player.last_action = ""
     await query.answer()
     await update_player_message(context, chat_id, session, player.user_id)

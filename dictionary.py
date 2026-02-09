@@ -1,5 +1,6 @@
 """Dictionary loading and word validation for the Anagram game."""
 
+from collections import Counter
 from typing import Set, List
 from config import DICTIONARY_PATH, MIN_WORD_LENGTH, NUM_LETTERS
 
@@ -36,29 +37,31 @@ class Dictionary:
         return word.upper() in self._words
 
     def can_form_word(self, word: str, available_letters: List[str]) -> bool:
-        """Check if a word can be formed using the available letters (letters reusable)."""
-        available_set = set(l.upper() for l in available_letters)
-        return all(c in available_set for c in word.upper())
+        """Check if a word can be formed using the available letters (each letter used once)."""
+        available_count = Counter(l.upper() for l in available_letters)
+        word_count = Counter(word.upper())
+        return all(word_count[c] <= available_count.get(c, 0) for c in word_count)
 
     def find_possible_words(self, letters: List[str]) -> List[str]:
         """Find all valid words that can be formed from the given letters.
 
-        Since letters are reusable, we just need each character in the word
-        to be present in the available letter set.
+        Each letter can only be used once per word.
         """
-        available_set = set(l.upper() for l in letters)
+        available_count = Counter(l.upper() for l in letters)
         possible = []
         for word in self._words:
-            if all(c in available_set for c in word):
+            word_count = Counter(word)
+            if all(word_count[c] <= available_count.get(c, 0) for c in word_count):
                 possible.append(word)
         return sorted(possible, key=lambda w: (len(w), w))
 
     def count_possible_words(self, letters: List[str]) -> int:
         """Count how many valid words can be formed from the given letters."""
-        available_set = set(l.upper() for l in letters)
+        available_count = Counter(l.upper() for l in letters)
         count = 0
         for word in self._words:
-            if all(c in available_set for c in word):
+            word_count = Counter(word)
+            if all(word_count[c] <= available_count.get(c, 0) for c in word_count):
                 count += 1
         return count
 
