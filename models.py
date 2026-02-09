@@ -2,7 +2,7 @@
 
 import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Set
 from enum import Enum
 
 from config import GAME_DURATION, SCORE_MAP
@@ -29,6 +29,8 @@ class Player:
     current_input: str = ""
     message_id: Optional[int] = None
     last_action: str = ""
+    used_positions: Set[int] = field(default_factory=set)
+    input_positions: List[int] = field(default_factory=list)
 
     def add_word(self, word):
         word = word.upper()
@@ -45,13 +47,31 @@ class Player:
 
     def reset_input(self):
         self.current_input = ""
+        self.used_positions.clear()
+        self.input_positions.clear()
 
     def backspace(self):
-        self.current_input = self.current_input[:-1]
+        """Remove last letter and restore its position."""
+        if self.current_input and self.input_positions:
+            self.input_positions.pop()
+            self.current_input = self.current_input[:-1]
+            self.used_positions = set(self.input_positions)
 
-    def add_letter(self, letter):
-        if len(self.current_input) < 6:
+    def add_letter(self, letter, position):
+        """Add a letter from a specific position."""
+        if len(self.current_input) < 6 and position not in self.used_positions:
             self.current_input += letter.upper()
+            self.used_positions.add(position)
+            self.input_positions.append(position)
+
+    def restore_position(self, position):
+        """Restore a used position (press X to undo)."""
+        if position in self.used_positions:
+            self.used_positions.discard(position)
+            if position in self.input_positions:
+                idx = self.input_positions.index(position)
+                self.input_positions.pop(idx)
+                self.current_input = self.current_input[:idx] + self.current_input[idx+1:]
 
 
 @dataclass
