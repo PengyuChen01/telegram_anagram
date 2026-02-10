@@ -1,7 +1,6 @@
 """Telegram Anagram Bot."""
 
 import logging
-import time
 from typing import Dict
 
 from telegram import Update, CallbackQuery
@@ -68,7 +67,6 @@ async def update_player_message(context, chat_id, session, user_id):
             chat_id=chat_id, message_id=player.message_id,
             text=text, reply_markup=keyboard,
         )
-        player.last_update_time = time.time()
     except Exception as e:
         if "Message is not modified" not in str(e):
             logger.warning("Failed to update message: %s", e)
@@ -79,10 +77,6 @@ async def end_game(context, chat_id):
     if not session:
         return
     session.finish()
-    # Stop the tick job
-    jobs = context.job_queue.get_jobs_by_name("game_tick_%d" % chat_id)
-    for job in jobs:
-        job.schedule_removal()
     for player in session.players.values():
         if player.message_id:
             try:
@@ -99,34 +93,9 @@ async def end_game(context, chat_id):
     del active_games[chat_id]
 
 
-async def tick_callback(context):
-    """Called every second to refresh the timer display for all players."""
+async def timer_callback(context):
     chat_id = context.job.data
-    session = active_games.get(chat_id)
-    if not session or not session.is_playing:
-        return
-    async with session.lock:
-        if session.time_remaining <= 0:
-            await end_game(context, chat_id)
-            return
-        now = time.time()
-        for user_id, player in session.players.items():
-            if not player.message_id:
-                continue
-            # Skip if player message was just updated by a user action (< 0.8s ago)
-            if now - player.last_update_time < 0.8:
-                continue
-            text = format_game_message(session, player)
-            keyboard = build_game_keyboard(session.letters, player.used_positions)
-            try:
-                await context.bot.edit_message_text(
-                    chat_id=chat_id, message_id=player.message_id,
-                    text=text, reply_markup=keyboard,
-                )
-                player.last_update_time = now
-            except Exception as e:
-                if "Message is not modified" not in str(e):
-                    logger.warning("Tick update failed: %s", e)
+    await end_game(context, chat_id)
 
 
 async def start_game_session(context, session):
@@ -137,22 +106,25 @@ async def start_game_session(context, session):
                 session.chat_id, session.letters, len(session.possible_words))
     for user_id in session.players:
         await send_game_keyboard(context, session.chat_id, session, user_id)
-    # Start a repeating job that ticks every 1 second
-    context.job_queue.run_repeating(
-        tick_callback, interval=1, first=1,
-        data=session.chat_id, name="game_tick_%d" % session.chat_id,
+    context.job_queue.run_once(
+        timer_callback, when=GAME_DURATION,
+        data=session.chat_id, name="game_timer_%d" % session.chat_id,
     )
 
 
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = ("Welcome to the Anagram Game!\n\n"
-           "Given 6 random letters, find as many words as you can in 60 seconds!\n\n"
+           "You have 60 seconds to find as many words as possible "
+           "from 6 random letters!\n\n"
+           "Rules:\n"
+           "  - Words must be 3-6 letters\n"
+           "  - Each letter can only be used once per word\n"
+           "  - Find as many words as you can before time runs out!\n\n"
            "Scoring:\n"
            "  3 letters = 300 pts\n"
            "  4 letters = 400 pts\n"
            "  5 letters = 500 pts\n"
            "  6 letters = 600 pts\n\n"
-           "Each letter can only be used once per word!\n\n"
            "Commands:\n"
            "  /play  - Start a solo game\n"
            "  /multi - Create a multiplayer game\n"
@@ -276,55 +248,51 @@ async def handle_begin(query, context, chat_id, user):
 
 
 async def handle_letter_press(query, context, chat_id, session, player, letter, position):
-    async with session.lock:
-        if session.time_remaining <= 0:
-            await query.answer("Time is up!")
-            return
-        if position in player.used_positions:
-            await query.answer("Already used!")
-            return
-        player.add_letter(letter, position)
-        player.last_action = ""
+    if session.time_remaining <= 0:
+        await query.answer("Time is up!")
+        return
+    if position in player.used_positions:
         await query.answer()
-        await update_player_message(context, chat_id, session, player.user_id)
+        return
+    player.add_letter(letter, position)
+    player.last_action = ""
+    await query.answer()
+    await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_restore(query, context, chat_id, session, player, position):
-    async with session.lock:
-        if session.time_remaining <= 0:
-            await query.answer("Time is up!")
-            return
-        player.restore_position(position)
-        player.last_action = ""
-        await query.answer()
-        await update_player_message(context, chat_id, session, player.user_id)
+    if session.time_remaining <= 0:
+        await query.answer("Time is up!")
+        return
+    player.restore_position(position)
+    player.last_action = ""
+    await query.answer()
+    await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_backspace(query, context, chat_id, session, player):
-    async with session.lock:
-        if session.time_remaining <= 0:
-            await query.answer("Time is up!")
-            return
-        player.backspace()
-        player.last_action = ""
-        await query.answer()
-        await update_player_message(context, chat_id, session, player.user_id)
+    if session.time_remaining <= 0:
+        await query.answer("Time is up!")
+        return
+    player.backspace()
+    player.last_action = ""
+    await query.answer()
+    await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_submit(query, context, chat_id, session, player):
-    async with session.lock:
-        if session.time_remaining <= 0:
-            await query.answer("Time is up!")
-            return
-        word = player.current_input.strip()
-        if not word:
-            await query.answer("Type some letters first!")
-            return
-        success, message, points = validate_submission(player, word, session)
-        player.last_action = message
-        player.reset_input()
-        await query.answer(message)
-        await update_player_message(context, chat_id, session, player.user_id)
+    if session.time_remaining <= 0:
+        await query.answer("Time is up!")
+        return
+    word = player.current_input.strip()
+    if not word:
+        await query.answer("Type some letters first!")
+        return
+    success, message, points = validate_submission(player, word, session)
+    player.last_action = message
+    player.reset_input()
+    await query.answer(message)
+    await update_player_message(context, chat_id, session, player.user_id)
 
 
 def main():
@@ -335,7 +303,7 @@ def main():
     app.add_handler(CommandHandler("multi", cmd_multi))
     app.add_handler(CallbackQueryHandler(handle_callback))
     logger.info("Bot starting...")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    app.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
 
 
 if __name__ == "__main__":
