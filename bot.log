@@ -1,231 +1,350 @@
-2026-02-09 12:03:39,320 - __main__ - INFO - Bot starting...
-2026-02-09 12:03:39,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getMe "HTTP/1.1 200 OK"
-2026-02-09 12:03:39,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/deleteWebhook "HTTP/1.1 200 OK"
-2026-02-09 12:03:39,813 - apscheduler.scheduler - INFO - Scheduler started
-2026-02-09 12:03:39,814 - telegram.ext.Application - INFO - Application started
-2026-02-09 12:03:47,373 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:47,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/sendMessage "HTTP/1.1 200 OK"
-2026-02-09 12:03:48,172 - __main__ - INFO - Game started in chat 6130919642: letters=['M', 'U', 'O', 'A', 'C', 'T'], possible=41
-2026-02-09 12:03:48,427 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/sendMessage "HTTP/1.1 200 OK"
-2026-02-09 12:03:48,430 - apscheduler.scheduler - INFO - Added job "game_tick_6130919642" to job store "default"
-2026-02-09 12:03:49,432 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:50 UTC)" (scheduled at 2026-02-09 17:03:49.429173+00:00)
-2026-02-09 12:03:49,681 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:49,683 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:50 UTC)" executed successfully
-2026-02-09 12:03:50,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:50,443 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:51 UTC)" (scheduled at 2026-02-09 17:03:50.429173+00:00)
-2026-02-09 12:03:50,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:50,808 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:50,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:50,931 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:51 UTC)" executed successfully
-2026-02-09 12:03:51,156 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:51,397 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:51,445 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:52 UTC)" (scheduled at 2026-02-09 17:03:51.429173+00:00)
-2026-02-09 12:03:51,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:51,717 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:51,719 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:52 UTC)" executed successfully
-2026-02-09 12:03:52,134 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:52,376 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:52,431 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:53 UTC)" (scheduled at 2026-02-09 17:03:52.429173+00:00)
-2026-02-09 12:03:52,623 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:52,669 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:52,671 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:53 UTC)" executed successfully
-2026-02-09 12:03:53,359 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:53,438 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:54 UTC)" (scheduled at 2026-02-09 17:03:53.429173+00:00)
-2026-02-09 12:03:53,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:53,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:53,841 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:54 UTC)" executed successfully
-2026-02-09 12:03:54,045 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:54,433 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:55 UTC)" (scheduled at 2026-02-09 17:03:54.429173+00:00)
-2026-02-09 12:03:54,684 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:54,686 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:55 UTC)" executed successfully
-2026-02-09 12:03:55,382 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:55,442 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:56 UTC)" (scheduled at 2026-02-09 17:03:55.429173+00:00)
-2026-02-09 12:03:55,625 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:55,686 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:55,688 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:56 UTC)" executed successfully
-2026-02-09 12:03:55,873 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:56,452 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:57 UTC)" (scheduled at 2026-02-09 17:03:56.429173+00:00)
-2026-02-09 12:03:56,717 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:56,719 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:57 UTC)" executed successfully
-2026-02-09 12:03:56,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:57,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:57,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:57,432 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:58 UTC)" (scheduled at 2026-02-09 17:03:57.429173+00:00)
-2026-02-09 12:03:57,679 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:03:57,680 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:58 UTC)" executed successfully
-2026-02-09 12:03:57,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:57,999 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:58,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:58,442 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:59 UTC)" (scheduled at 2026-02-09 17:03:58.429173+00:00)
-2026-02-09 12:03:58,612 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:58,694 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:58,697 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:03:59 UTC)" executed successfully
-2026-02-09 12:03:58,857 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:59,107 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:59,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:03:59,449 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:00 UTC)" (scheduled at 2026-02-09 17:03:59.429173+00:00)
-2026-02-09 12:03:59,452 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:03:59,707 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:03:59,710 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:00 UTC)" executed successfully
-2026-02-09 12:03:59,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:00,435 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:01 UTC)" (scheduled at 2026-02-09 17:04:00.429173+00:00)
-2026-02-09 12:04:00,681 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:00,683 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:01 UTC)" executed successfully
-2026-02-09 12:04:01,442 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:02 UTC)" (scheduled at 2026-02-09 17:04:01.429173+00:00)
-2026-02-09 12:04:01,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:01,698 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:02 UTC)" executed successfully
-2026-02-09 12:04:02,450 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:03 UTC)" (scheduled at 2026-02-09 17:04:02.429173+00:00)
-2026-02-09 12:04:02,574 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:02,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:02,698 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:03 UTC)" executed successfully
-2026-02-09 12:04:02,814 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:03,078 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:03,327 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:03,439 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:04 UTC)" (scheduled at 2026-02-09 17:04:03.429173+00:00)
-2026-02-09 12:04:03,577 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:03,690 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:03,694 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:04 UTC)" executed successfully
-2026-02-09 12:04:04,430 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:05 UTC)" (scheduled at 2026-02-09 17:04:04.429173+00:00)
-2026-02-09 12:04:04,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:04,693 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:05 UTC)" executed successfully
-2026-02-09 12:04:05,438 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:06 UTC)" (scheduled at 2026-02-09 17:04:05.429173+00:00)
-2026-02-09 12:04:05,701 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:05,704 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:06 UTC)" executed successfully
-2026-02-09 12:04:06,440 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:07 UTC)" (scheduled at 2026-02-09 17:04:06.429173+00:00)
-2026-02-09 12:04:06,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:06,697 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:07 UTC)" executed successfully
-2026-02-09 12:04:06,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:07,185 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:07,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:07,437 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:08 UTC)" (scheduled at 2026-02-09 17:04:07.429173+00:00)
-2026-02-09 12:04:07,676 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:07,678 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:08 UTC)" executed successfully
-2026-02-09 12:04:07,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:08,162 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:08,414 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:08,429 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:09 UTC)" (scheduled at 2026-02-09 17:04:08.429173+00:00)
-2026-02-09 12:04:08,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:08,678 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:09 UTC)" executed successfully
-2026-02-09 12:04:08,743 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:08,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:09,237 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:09,432 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:10 UTC)" (scheduled at 2026-02-09 17:04:09.429173+00:00)
-2026-02-09 12:04:09,688 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:09,690 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:10 UTC)" executed successfully
-2026-02-09 12:04:10,328 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:10,435 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:11 UTC)" (scheduled at 2026-02-09 17:04:10.429173+00:00)
-2026-02-09 12:04:10,566 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:10,829 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:10,934 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:10,936 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:11 UTC)" executed successfully
-2026-02-09 12:04:11,441 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:12 UTC)" (scheduled at 2026-02-09 17:04:11.429173+00:00)
-2026-02-09 12:04:11,714 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:11,717 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:12 UTC)" executed successfully
-2026-02-09 12:04:12,444 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:13 UTC)" (scheduled at 2026-02-09 17:04:12.429173+00:00)
-2026-02-09 12:04:12,697 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:12,699 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:13 UTC)" executed successfully
-2026-02-09 12:04:13,446 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:14 UTC)" (scheduled at 2026-02-09 17:04:13.429173+00:00)
-2026-02-09 12:04:13,694 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:13,697 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:14 UTC)" executed successfully
-2026-02-09 12:04:14,438 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:15 UTC)" (scheduled at 2026-02-09 17:04:14.429173+00:00)
-2026-02-09 12:04:14,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:14,697 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:15 UTC)" executed successfully
-2026-02-09 12:04:15,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:15,441 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:16 UTC)" (scheduled at 2026-02-09 17:04:15.429173+00:00)
-2026-02-09 12:04:15,444 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:15,690 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:15,703 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:15,705 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:16 UTC)" executed successfully
-2026-02-09 12:04:16,452 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:17 UTC)" (scheduled at 2026-02-09 17:04:16.429173+00:00)
-2026-02-09 12:04:16,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:16,704 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:17 UTC)" executed successfully
-2026-02-09 12:04:17,444 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:18 UTC)" (scheduled at 2026-02-09 17:04:17.429173+00:00)
-2026-02-09 12:04:17,699 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:17,701 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:18 UTC)" executed successfully
-2026-02-09 12:04:17,768 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:18,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:18,251 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:18,430 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:19 UTC)" (scheduled at 2026-02-09 17:04:18.429173+00:00)
-2026-02-09 12:04:18,636 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:18,685 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:18,687 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:19 UTC)" executed successfully
-2026-02-09 12:04:18,884 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:19,132 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:19,433 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:20 UTC)" (scheduled at 2026-02-09 17:04:19.429173+00:00)
-2026-02-09 12:04:19,437 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:19,678 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:19,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:19,684 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:20 UTC)" executed successfully
-2026-02-09 12:04:19,931 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:20,441 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:21 UTC)" (scheduled at 2026-02-09 17:04:20.429173+00:00)
-2026-02-09 12:04:20,461 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:20,684 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:20,686 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:21 UTC)" executed successfully
-2026-02-09 12:04:20,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:20,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:21,448 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:22 UTC)" (scheduled at 2026-02-09 17:04:21.429173+00:00)
-2026-02-09 12:04:21,700 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:21,702 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:22 UTC)" executed successfully
-2026-02-09 12:04:22,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:22,445 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:23 UTC)" (scheduled at 2026-02-09 17:04:22.429173+00:00)
-2026-02-09 12:04:22,608 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:22,705 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:22,707 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:23 UTC)" executed successfully
-2026-02-09 12:04:22,851 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:23,065 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:23,312 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:23,444 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:24 UTC)" (scheduled at 2026-02-09 17:04:23.429173+00:00)
-2026-02-09 12:04:23,566 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:23,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:23,688 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:24 UTC)" executed successfully
-2026-02-09 12:04:24,161 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:24,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:24,446 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:25 UTC)" (scheduled at 2026-02-09 17:04:24.429173+00:00)
-2026-02-09 12:04:24,645 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:24,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 400 Bad Request"
-2026-02-09 12:04:24,692 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:25 UTC)" executed successfully
-2026-02-09 12:04:25,435 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:26 UTC)" (scheduled at 2026-02-09 17:04:25.429173+00:00)
-2026-02-09 12:04:25,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:25,705 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:26 UTC)" executed successfully
-2026-02-09 12:04:26,441 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:27 UTC)" (scheduled at 2026-02-09 17:04:26.429173+00:00)
-2026-02-09 12:04:26,587 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:26,706 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:26,708 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:27 UTC)" executed successfully
-2026-02-09 12:04:26,826 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:27,135 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:27,449 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:28 UTC)" (scheduled at 2026-02-09 17:04:27.429173+00:00)
-2026-02-09 12:04:27,699 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:27,701 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:28 UTC)" executed successfully
-2026-02-09 12:04:28,437 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:29 UTC)" (scheduled at 2026-02-09 17:04:28.429173+00:00)
-2026-02-09 12:04:28,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:28,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:28,691 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:29 UTC)" executed successfully
-2026-02-09 12:04:28,800 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:29,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:29,438 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:30 UTC)" (scheduled at 2026-02-09 17:04:29.429173+00:00)
-2026-02-09 12:04:29,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
-2026-02-09 12:04:29,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:29,694 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:30 UTC)" executed successfully
-2026-02-09 12:04:29,763 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
-2026-02-09 12:04:30,027 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:30,443 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:31 UTC)" (scheduled at 2026-02-09 17:04:30.429173+00:00)
-2026-02-09 12:04:30,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:30,699 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:31 UTC)" executed successfully
-2026-02-09 12:04:31,436 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:32 UTC)" (scheduled at 2026-02-09 17:04:31.429173+00:00)
-2026-02-09 12:04:31,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:31,698 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:32 UTC)" executed successfully
-2026-02-09 12:04:32,443 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:33 UTC)" (scheduled at 2026-02-09 17:04:32.429173+00:00)
-2026-02-09 12:04:32,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:32,792 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:33 UTC)" executed successfully
-2026-02-09 12:04:33,440 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:34 UTC)" (scheduled at 2026-02-09 17:04:33.429173+00:00)
-2026-02-09 12:04:33,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:33,798 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:34 UTC)" executed successfully
-2026-02-09 12:04:34,443 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:35 UTC)" (scheduled at 2026-02-09 17:04:34.429173+00:00)
-2026-02-09 12:04:34,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:34,697 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:35 UTC)" executed successfully
-2026-02-09 12:04:35,440 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:36 UTC)" (scheduled at 2026-02-09 17:04:35.429173+00:00)
-2026-02-09 12:04:35,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:35,694 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:36 UTC)" executed successfully
-2026-02-09 12:04:36,446 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:37 UTC)" (scheduled at 2026-02-09 17:04:36.429173+00:00)
-2026-02-09 12:04:36,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
-2026-02-09 12:04:36,692 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-09 17:04:37 UTC)" executed successfully
+2026-02-10 16:17:49,631 - __main__ - INFO - Bot starting...
+2026-02-10 16:17:49,980 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getMe "HTTP/1.1 200 OK"
+2026-02-10 16:17:50,096 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-10 16:17:50,099 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-10 16:17:50,099 - telegram.ext.Application - INFO - Application started
+2026-02-10 16:18:00,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:09,189 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-10 16:18:09,191 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:18:09,191 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:18:20,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:27,873 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:28,376 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/sendMessage "HTTP/1.1 200 OK"
+2026-02-10 16:18:28,662 - __main__ - INFO - Game started in chat 6130919642: letters=['S', 'U', 'I', 'M', 'Y', 'H'], possible=24
+2026-02-10 16:18:28,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/sendMessage "HTTP/1.1 200 OK"
+2026-02-10 16:18:28,917 - apscheduler.scheduler - INFO - Added job "game_tick_6130919642" to job store "default"
+2026-02-10 16:18:29,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:30 UTC)" (scheduled at 2026-02-10 21:18:29.914849+00:00)
+2026-02-10 16:18:30,173 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:30,174 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:30 UTC)" executed successfully
+2026-02-10 16:18:30,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:31 UTC)" (scheduled at 2026-02-10 21:18:30.914849+00:00)
+2026-02-10 16:18:31,195 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:31,197 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:31 UTC)" executed successfully
+2026-02-10 16:18:31,922 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:32 UTC)" (scheduled at 2026-02-10 21:18:31.914849+00:00)
+2026-02-10 16:18:32,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:32,177 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:32 UTC)" executed successfully
+2026-02-10 16:18:32,924 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:33 UTC)" (scheduled at 2026-02-10 21:18:32.914849+00:00)
+2026-02-10 16:18:33,172 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:33,174 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:33 UTC)" executed successfully
+2026-02-10 16:18:33,246 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:33,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:33,737 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:33,922 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:34 UTC)" (scheduled at 2026-02-10 21:18:33.914849+00:00)
+2026-02-10 16:18:33,922 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:34 UTC)" executed successfully
+2026-02-10 16:18:34,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:34,314 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:34,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:34,935 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:35 UTC)" (scheduled at 2026-02-10 21:18:34.914849+00:00)
+2026-02-10 16:18:34,936 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:35 UTC)" executed successfully
+2026-02-10 16:18:35,452 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:35,690 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:35,935 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:35,936 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:36 UTC)" (scheduled at 2026-02-10 21:18:35.914849+00:00)
+2026-02-10 16:18:35,936 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:36 UTC)" executed successfully
+2026-02-10 16:18:36,636 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:36,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:36,932 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:37 UTC)" (scheduled at 2026-02-10 21:18:36.914849+00:00)
+2026-02-10 16:18:37,119 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:37,120 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:37 UTC)" executed successfully
+2026-02-10 16:18:37,924 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:38 UTC)" (scheduled at 2026-02-10 21:18:37.914849+00:00)
+2026-02-10 16:18:38,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:38,176 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:38 UTC)" executed successfully
+2026-02-10 16:18:38,918 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:39 UTC)" (scheduled at 2026-02-10 21:18:38.914849+00:00)
+2026-02-10 16:18:38,919 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:39,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:39,178 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:39 UTC)" executed successfully
+2026-02-10 16:18:39,413 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:39,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:39,935 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:40 UTC)" (scheduled at 2026-02-10 21:18:39.914849+00:00)
+2026-02-10 16:18:39,936 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:40 UTC)" executed successfully
+2026-02-10 16:18:40,921 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:41 UTC)" (scheduled at 2026-02-10 21:18:40.914849+00:00)
+2026-02-10 16:18:41,169 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:41,172 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:41 UTC)" executed successfully
+2026-02-10 16:18:41,539 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:41,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:41,931 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:42 UTC)" (scheduled at 2026-02-10 21:18:41.914849+00:00)
+2026-02-10 16:18:42,025 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:42,028 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:42 UTC)" executed successfully
+2026-02-10 16:18:42,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:42,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:42,925 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:43 UTC)" (scheduled at 2026-02-10 21:18:42.914849+00:00)
+2026-02-10 16:18:43,141 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:43,143 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:43 UTC)" executed successfully
+2026-02-10 16:18:43,481 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:43,705 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-10 16:18:43,707 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:18:43,707 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:18:43,715 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:43,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:44 UTC)" (scheduled at 2026-02-10 21:18:43.914849+00:00)
+2026-02-10 16:18:43,965 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:43,968 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:44 UTC)" executed successfully
+2026-02-10 16:18:44,915 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:45 UTC)" (scheduled at 2026-02-10 21:18:44.914849+00:00)
+2026-02-10 16:18:45,158 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:45,161 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:45 UTC)" executed successfully
+2026-02-10 16:18:45,931 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:46 UTC)" (scheduled at 2026-02-10 21:18:45.914849+00:00)
+2026-02-10 16:18:46,149 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:46,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:46,178 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:46 UTC)" executed successfully
+2026-02-10 16:18:46,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:46,666 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:46,924 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:47 UTC)" (scheduled at 2026-02-10 21:18:46.914849+00:00)
+2026-02-10 16:18:46,925 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:47 UTC)" executed successfully
+2026-02-10 16:18:46,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:47,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:47,486 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:47,836 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:47,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:48 UTC)" (scheduled at 2026-02-10 21:18:47.914849+00:00)
+2026-02-10 16:18:48,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:48,321 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:48,324 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:48 UTC)" executed successfully
+2026-02-10 16:18:48,915 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:49 UTC)" (scheduled at 2026-02-10 21:18:48.914849+00:00)
+2026-02-10 16:18:48,916 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:49 UTC)" executed successfully
+2026-02-10 16:18:49,023 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:49,265 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:49,514 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:49,924 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:50 UTC)" (scheduled at 2026-02-10 21:18:49.914849+00:00)
+2026-02-10 16:18:49,925 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:50 UTC)" executed successfully
+2026-02-10 16:18:50,932 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:51 UTC)" (scheduled at 2026-02-10 21:18:50.914849+00:00)
+2026-02-10 16:18:51,178 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:51,179 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:51 UTC)" executed successfully
+2026-02-10 16:18:51,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:51,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:51,757 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:51,917 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:52 UTC)" (scheduled at 2026-02-10 21:18:51.914849+00:00)
+2026-02-10 16:18:51,918 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:52 UTC)" executed successfully
+2026-02-10 16:18:52,242 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:52,483 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:52,729 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:52,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:52,939 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:53 UTC)" (scheduled at 2026-02-10 21:18:52.914849+00:00)
+2026-02-10 16:18:53,071 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:53,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:53,319 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:53 UTC)" executed successfully
+2026-02-10 16:18:53,582 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:53,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:53,925 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:54 UTC)" (scheduled at 2026-02-10 21:18:53.914849+00:00)
+2026-02-10 16:18:54,068 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:54,070 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:54 UTC)" executed successfully
+2026-02-10 16:18:54,925 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:55 UTC)" (scheduled at 2026-02-10 21:18:54.914849+00:00)
+2026-02-10 16:18:55,135 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:55,176 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:55,179 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:55 UTC)" executed successfully
+2026-02-10 16:18:55,414 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:55,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:55,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:56 UTC)" (scheduled at 2026-02-10 21:18:55.914849+00:00)
+2026-02-10 16:18:55,927 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:56 UTC)" executed successfully
+2026-02-10 16:18:56,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:57 UTC)" (scheduled at 2026-02-10 21:18:56.914849+00:00)
+2026-02-10 16:18:57,166 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:57,168 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:57 UTC)" executed successfully
+2026-02-10 16:18:57,237 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:57,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:57,722 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:57,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:58 UTC)" (scheduled at 2026-02-10 21:18:57.914849+00:00)
+2026-02-10 16:18:57,925 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:58 UTC)" executed successfully
+2026-02-10 16:18:58,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:58,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:58,489 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:58,860 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:58,924 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:59 UTC)" (scheduled at 2026-02-10 21:18:58.914849+00:00)
+2026-02-10 16:18:59,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:59,349 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:18:59,351 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:18:59 UTC)" executed successfully
+2026-02-10 16:18:59,597 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:18:59,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:18:59,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:00 UTC)" (scheduled at 2026-02-10 21:18:59.914849+00:00)
+2026-02-10 16:19:00,095 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:00,096 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:00 UTC)" executed successfully
+2026-02-10 16:19:00,409 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:19:00,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-10 16:19:00,897 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:00,922 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:01 UTC)" (scheduled at 2026-02-10 21:19:00.914849+00:00)
+2026-02-10 16:19:00,924 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:01 UTC)" executed successfully
+2026-02-10 16:19:01,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:02 UTC)" (scheduled at 2026-02-10 21:19:01.914849+00:00)
+2026-02-10 16:19:02,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:02,190 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:02 UTC)" executed successfully
+2026-02-10 16:19:02,920 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:03 UTC)" (scheduled at 2026-02-10 21:19:02.914849+00:00)
+2026-02-10 16:19:03,168 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:03,169 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:03 UTC)" executed successfully
+2026-02-10 16:19:03,919 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:04 UTC)" (scheduled at 2026-02-10 21:19:03.914849+00:00)
+2026-02-10 16:19:04,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:04,165 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:04 UTC)" executed successfully
+2026-02-10 16:19:04,929 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:05 UTC)" (scheduled at 2026-02-10 21:19:04.914849+00:00)
+2026-02-10 16:19:05,180 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:05,182 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:05 UTC)" executed successfully
+2026-02-10 16:19:05,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:06 UTC)" (scheduled at 2026-02-10 21:19:05.914849+00:00)
+2026-02-10 16:19:06,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:06,181 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:06 UTC)" executed successfully
+2026-02-10 16:19:06,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:07 UTC)" (scheduled at 2026-02-10 21:19:06.914849+00:00)
+2026-02-10 16:19:07,170 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:07,173 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:07 UTC)" executed successfully
+2026-02-10 16:19:07,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:08 UTC)" (scheduled at 2026-02-10 21:19:07.914849+00:00)
+2026-02-10 16:19:08,171 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:08,175 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:08 UTC)" executed successfully
+2026-02-10 16:19:08,931 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:09 UTC)" (scheduled at 2026-02-10 21:19:08.914849+00:00)
+2026-02-10 16:19:09,181 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:09,183 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:09 UTC)" executed successfully
+2026-02-10 16:19:09,919 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:10 UTC)" (scheduled at 2026-02-10 21:19:09.914849+00:00)
+2026-02-10 16:19:10,195 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:10,195 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:10 UTC)" executed successfully
+2026-02-10 16:19:10,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:19:10,931 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:11 UTC)" (scheduled at 2026-02-10 21:19:10.914849+00:00)
+2026-02-10 16:19:11,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:11,177 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:11 UTC)" executed successfully
+2026-02-10 16:19:11,936 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:12 UTC)" (scheduled at 2026-02-10 21:19:11.914849+00:00)
+2026-02-10 16:19:12,189 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:12,190 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:12 UTC)" executed successfully
+2026-02-10 16:19:12,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:13 UTC)" (scheduled at 2026-02-10 21:19:12.914849+00:00)
+2026-02-10 16:19:13,173 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:13,175 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:13 UTC)" executed successfully
+2026-02-10 16:19:13,932 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:14 UTC)" (scheduled at 2026-02-10 21:19:13.914849+00:00)
+2026-02-10 16:19:14,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:14,177 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:14 UTC)" executed successfully
+2026-02-10 16:19:14,931 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:15 UTC)" (scheduled at 2026-02-10 21:19:14.914849+00:00)
+2026-02-10 16:19:15,182 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:15,182 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:15 UTC)" executed successfully
+2026-02-10 16:19:15,926 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:16 UTC)" (scheduled at 2026-02-10 21:19:15.914849+00:00)
+2026-02-10 16:19:16,171 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:16,172 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:16 UTC)" executed successfully
+2026-02-10 16:19:16,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:17 UTC)" (scheduled at 2026-02-10 21:19:16.914849+00:00)
+2026-02-10 16:19:17,173 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:17,175 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:17 UTC)" executed successfully
+2026-02-10 16:19:17,927 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:18 UTC)" (scheduled at 2026-02-10 21:19:17.914849+00:00)
+2026-02-10 16:19:18,173 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:18,173 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:18 UTC)" executed successfully
+2026-02-10 16:19:18,237 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-10 16:19:18,239 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:19:18,240 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:19:18,917 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:19 UTC)" (scheduled at 2026-02-10 21:19:18.914849+00:00)
+2026-02-10 16:19:19,165 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:19,169 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:19 UTC)" executed successfully
+2026-02-10 16:19:19,942 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:20 UTC)" (scheduled at 2026-02-10 21:19:19.914849+00:00)
+2026-02-10 16:19:20,202 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:20,203 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:20 UTC)" executed successfully
+2026-02-10 16:19:20,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:21 UTC)" (scheduled at 2026-02-10 21:19:20.914849+00:00)
+2026-02-10 16:19:21,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:21,178 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:21 UTC)" executed successfully
+2026-02-10 16:19:21,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:22 UTC)" (scheduled at 2026-02-10 21:19:21.914849+00:00)
+2026-02-10 16:19:22,176 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:22,176 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:22 UTC)" executed successfully
+2026-02-10 16:19:22,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:23 UTC)" (scheduled at 2026-02-10 21:19:22.914849+00:00)
+2026-02-10 16:19:23,168 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:23,169 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:23 UTC)" executed successfully
+2026-02-10 16:19:23,915 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:24 UTC)" (scheduled at 2026-02-10 21:19:23.914849+00:00)
+2026-02-10 16:19:24,161 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:24,161 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:24 UTC)" executed successfully
+2026-02-10 16:19:24,936 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:25 UTC)" (scheduled at 2026-02-10 21:19:24.914849+00:00)
+2026-02-10 16:19:25,181 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:25,185 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:25 UTC)" executed successfully
+2026-02-10 16:19:25,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:26 UTC)" (scheduled at 2026-02-10 21:19:25.914849+00:00)
+2026-02-10 16:19:26,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:26,181 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:26 UTC)" executed successfully
+2026-02-10 16:19:26,925 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:27 UTC)" (scheduled at 2026-02-10 21:19:26.914849+00:00)
+2026-02-10 16:19:27,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:27,177 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:27 UTC)" executed successfully
+2026-02-10 16:19:27,923 - apscheduler.executors.default - INFO - Running job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:28 UTC)" (scheduled at 2026-02-10 21:19:27.914849+00:00)
+2026-02-10 16:19:27,924 - apscheduler.scheduler - INFO - Removed job 3a64a8d7de8944ea8464dc19ce354c64
+2026-02-10 16:19:28,168 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/editMessageText "HTTP/1.1 200 OK"
+2026-02-10 16:19:28,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/sendMessage "HTTP/1.1 200 OK"
+2026-02-10 16:19:28,427 - apscheduler.executors.default - INFO - Job "game_tick_6130919642 (trigger: interval[0:00:01], next run at: 2026-02-10 21:19:28 UTC)" executed successfully
+2026-02-10 16:19:29,356 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:19:39,476 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:19:49,596 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
+2026-02-10 16:19:52,766 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-10 16:19:52,769 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:19:52,769 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 749, in do_action
+    return action_cb_task.result()
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 4326, in get_updates
+    await self._post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 618, in _post
+    return await self._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\ext\_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\_bot.py", line 647, in _do_post
+    result = await request.post(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "C:\Users\pengy\AppData\Roaming\Python\Python38\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-10 16:20:03,883 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8239346485:AAGbUgMlgDMaL4BRYyMnXqEVHGPKlcLImuU/getUpdates "HTTP/1.1 200 OK"
