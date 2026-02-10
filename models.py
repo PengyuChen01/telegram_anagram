@@ -1,5 +1,6 @@
 """Data models for the Anagram game."""
 
+import asyncio
 import time
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set
@@ -31,6 +32,7 @@ class Player:
     last_action: str = ""
     used_positions: Set[int] = field(default_factory=set)
     input_positions: List[int] = field(default_factory=list)
+    last_update_time: float = 0.0
 
     def add_word(self, word):
         word = word.upper()
@@ -84,6 +86,7 @@ class GameSession:
     start_time: float = 0.0
     host_user_id: int = 0
     possible_words: List[str] = field(default_factory=list)
+    lock: asyncio.Lock = field(default_factory=asyncio.Lock)
 
     def add_player(self, user_id, username, display_name):
         if user_id not in self.players:

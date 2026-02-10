@@ -1,6 +1,7 @@
 """Telegram Anagram Bot."""
 
 import logging
+import time
 from typing import Dict
 
 from telegram import Update, CallbackQuery
@@ -67,6 +68,7 @@ async def update_player_message(context, chat_id, session, user_id):
             chat_id=chat_id, message_id=player.message_id,
             text=text, reply_markup=keyboard,
         )
+        player.last_update_time = time.time()
     except Exception as e:
         if "Message is not modified" not in str(e):
             logger.warning("Failed to update message: %s", e)
@@ -103,12 +105,17 @@ async def tick_callback(context):
     session = active_games.get(chat_id)
     if not session or not session.is_playing:
         return
-    if session.time_remaining <= 0:
-        await end_game(context, chat_id)
-        return
-    # Update every player's message to show the new time
-    for user_id, player in session.players.items():
-        if player.message_id:
+    async with session.lock:
+        if session.time_remaining <= 0:
+            await end_game(context, chat_id)
+            return
+        now = time.time()
+        for user_id, player in session.players.items():
+            if not player.message_id:
+                continue
+            # Skip if player message was just updated by a user action (< 0.8s ago)
+            if now - player.last_update_time < 0.8:
+                continue
             text = format_game_message(session, player)
             keyboard = build_game_keyboard(session.letters, player.used_positions)
             try:
@@ -116,6 +123,7 @@ async def tick_callback(context):
                     chat_id=chat_id, message_id=player.message_id,
                     text=text, reply_markup=keyboard,
                 )
+                player.last_update_time = now
             except Exception as e:
                 if "Message is not modified" not in str(e):
                     logger.warning("Tick update failed: %s", e)
@@ -144,7 +152,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
            "  4 letters = 400 pts\n"
            "  5 letters = 500 pts\n"
            "  6 letters = 600 pts\n\n"
-           "Letters can be reused!\n\n"
+           "Each letter can only be used once per word!\n\n"
            "Commands:\n"
            "  /play  - Start a solo game\n"
            "  /multi - Create a multiplayer game\n"
@@ -207,12 +215,21 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parts = data[len(CB_LETTER):].split(":")
         position = int(parts[0])
         letter = parts[1]
-        await handle_letter_press(query, context, chat_id, session, player, letter, position)
+        if position in player.used_positions:
+            # Stale callback from cached keyboard, treat as restore
+            await handle_restore(query, context, chat_id, session, player, position)
+        else:
+            await handle_letter_press(query, context, chat_id, session, player, letter, position)
     elif data.startswith(CB_RESTORE):
         # format: restore:<position>:<letter>
         parts = data[len(CB_RESTORE):].split(":")
         position = int(parts[0])
-        await handle_restore(query, context, chat_id, session, player, position)
+        letter = parts[1]
+        if position in player.used_positions:
+            await handle_restore(query, context, chat_id, session, player, position)
+        else:
+            # Position already restored (e.g. after submit), treat as letter press
+            await handle_letter_press(query, context, chat_id, session, player, letter, position)
     elif data == CB_BACKSPACE:
         await handle_backspace(query, context, chat_id, session, player)
     elif data == CB_SUBMIT:
@@ -259,51 +276,55 @@ async def handle_begin(query, context, chat_id, user):
 
 
 async def handle_letter_press(query, context, chat_id, session, player, letter, position):
-    if session.time_remaining <= 0:
-        await query.answer("Time is up!")
-        return
-    if position in player.used_positions:
-        await query.answer("Already used!")
-        return
-    player.add_letter(letter, position)
-    player.last_action = ""
-    await query.answer()
-    await update_player_message(context, chat_id, session, player.user_id)
+    async with session.lock:
+        if session.time_remaining <= 0:
+            await query.answer("Time is up!")
+            return
+        if position in player.used_positions:
+            await query.answer("Already used!")
+            return
+        player.add_letter(letter, position)
+        player.last_action = ""
+        await query.answer()
+        await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_restore(query, context, chat_id, session, player, position):
-    if session.time_remaining <= 0:
-        await query.answer("Time is up!")
-        return
-    player.restore_position(position)
-    player.last_action = ""
-    await query.answer()
-    await update_player_message(context, chat_id, session, player.user_id)
+    async with session.lock:
+        if session.time_remaining <= 0:
+            await query.answer("Time is up!")
+            return
+        player.restore_position(position)
+        player.last_action = ""
+        await query.answer()
+        await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_backspace(query, context, chat_id, session, player):
-    if session.time_remaining <= 0:
-        await query.answer("Time is up!")
-        return
-    player.backspace()
-    player.last_action = ""
-    await query.answer()
-    await update_player_message(context, chat_id, session, player.user_id)
+    async with session.lock:
+        if session.time_remaining <= 0:
+            await query.answer("Time is up!")
+            return
+        player.backspace()
+        player.last_action = ""
+        await query.answer()
+        await update_player_message(context, chat_id, session, player.user_id)
 
 
 async def handle_submit(query, context, chat_id, session, player):
-    if session.time_remaining <= 0:
-        await query.answer("Time is up!")
-        return
-    word = player.current_input.strip()
-    if not word:
-        await query.answer("Type some letters first!")
-        return
-    success, message, points = validate_submission(player, word, session)
-    player.last_action = message
-    player.reset_input()
-    await query.answer(message)
-    await update_player_message(context, chat_id, session, player.user_id)
+    async with session.lock:
+        if session.time_remaining <= 0:
+            await query.answer("Time is up!")
+            return
+        word = player.current_input.strip()
+        if not word:
+            await query.answer("Type some letters first!")
+            return
+        success, message, points = validate_submission(player, word, session)
+        player.last_action = message
+        player.reset_input()
+        await query.answer(message)
+        await update_player_message(context, chat_id, session, player.user_id)
 
 
 def main():
